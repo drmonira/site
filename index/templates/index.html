@@ -1,0 +1,100 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+         <title>د/رغد</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Parallax Content Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slider, animations, parallax, delayed, easing, jquery, css3, kendo UI" />
+        <meta name="author" content="Codrops" />
+   
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/style2.css' %}" />
+		<script type="text/javascript" src="{% static 'index/js/modernizr.custom.28468.js' %}"></script>
+		<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{% static 'index/css/nojs.css' %}" />
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+            	{% if token %}
+	             <a href="{% url 'logout' %}">
+	                 <strong>مرحبا {{username}}</strong> إضغط هنا لتسجيل الخروج&laquo;
+	             </a>
+                {% else %}
+                <a href="{% url 'main_page_logtrick' %}">
+                    <strong>رجاء </strong> تسجيل الدخول &laquo;
+                 </a>
+                {% endif %}
+                
+                <span class="right">
+					<a href="groups/">تقويمك</a>
+					<a href="{% url 'content' %}"> الدروس</a>
+                    <a href="{% url 'main' %}">
+                        <strong>  الرئيسيه </strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>أثر أسلوب التعلم المدمج فى تنمية الذكاء اللغوي ومهارات التواصل الكتابي <span>لدي تلاميذ المرحلة الابتدائية في دولة الكويت</span></h1>
+				<h2></h2>
+				<p class="codrops-demos">
+				{% if not token %}
+					<a class="current-demo" href="{% url 'main_page_logtrick' %}"> تسجيل الدخول</a>
+				{% else %}
+					<a class="current-demo" href="{% url 'logout' %}"> تسجيل الخروج</a>
+				{% endif %}
+					<a href="admin/" 	>دخول المشرفين</a>
+				</p>
+			</header>
+			<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<p> يسعدني التشرف بمروركم الكريم لموقع د/منيرة عبيد سعد سودان الرشيدي حيث نناقش ونعرض رسالتها  للحصول على درجة الماجستير تكنولوجيا التعليم في التربية النوعية(تخصص تكنولوجيا التعليم) <br> ...تنويه: الموقع تحت الإنشاء وسيكون متاح في غضون أيام  </p>
+					<h2>ترحيب دافيء</h2>
+					<a href="#" class="da-link">معرفة المزيد</a>
+					<div class="da-img"><img src="{% static 'index/images/1.png' %}" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>السيره الذاتيه </h2>
+					<p>يمكنك التعرف على السيره الذاتيه للباحثه كما يمكنك التواصل معها من خلال الموقع . فقط قم بالتسجيل لكي تتمكن من ذلك</p>
+					<a href="{% url 'more' %}" class="da-link">تواصل</a>
+					<div class="da-img"><img src="{% static 'index/images/2.png' %}" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>اترك رساله  </h2>
+					<p> إذا كان  لديك أسئله أو اقتراحات  اترك رساله فيمكننا التواصل معك </p>
+					<a href="#" class="da-link">راسلنا</a>
+					<div class="da-img"><img src="{% static 'index/images/1.png' %}" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>المحتوى العلمي</h2>
+					<p> لكي تتمكن من رؤية المحتوى يجب عليك الأشتراك والتسجيل في الموقع    </p>
+					<a href="{% url 'content' %}" class="da-link">معرفة المزيد</a>
+					<div class="da-img"><img src="{% static 'index/images/4.png' %}" alt="image01" /></div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			</div>
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src=" {% static 'index/js/jquery.cslider.js' %}"></script>
+		<script type="text/javascript">
+			$(function() {
+			
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 1000
+				});
+			
+			});
+		</script>	
+    </body>
+</html>

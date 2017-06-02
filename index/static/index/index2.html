@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+         <title>د/رغد</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Parallax Content Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slider, animations, parallax, delayed, easing, jquery, css3, kendo UI" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/nojs.css" />
+		</noscript>
+    </head>
+    <body>
+        <div class="container">
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="#">
+                    <strong> اترك رساله </strong>لكي نصل إليك &laquo;
+                </a>
+                <span class="right">
+					<a href="">ضع رابط هنا </a>
+					<a href="">ضع رابط هنا</a>
+                    <a href="">
+                        <strong>ضع رابط هنا</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+			<header>
+				<h1>مادة الكهرباء الالكترونيات  <span>لتلاميذ الصف السادس بالمرحله المتوسطه</span></h1>
+				<h2>رسالة مجستير مقدمه من د/رغد محمد الزلزله</h2>
+				<p class="codrops-demos">
+					<a class="current-demo" href="index2.html"> العرض التلقائي</a>
+					<a href="" onclick="$(function() {
+			
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 450
+				});
+			
+			});	">العرض اليدوي</a>
+				</p>
+			</header>
+			<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2>ترحيب دافيء</h2>
+					<p> يسعدني التشرف بمروركم الكريم لموقع د/رغد محمد الزلزله حيث نناقش ونعرض رسالتها للحصول على درجة الماجستير تكنولوجيا التعليم في التربيه النوعيه تخصصم تكنولوجيا التعلي</p>
+					<a href="#" class="da-link">معرفة المزيد</a>
+					<div class="da-img"><img src="images/2.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>ضع شيء هنا</h2>
+					<p>ضع نص هنا ......... </p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><img src="images/3.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>ضع شيء هنا </h2>
+					<p>ضع نص هنا</p>
+					<a href="#" class="da-link">Read more</a>
+					<div class="da-img"><img src="images/1.png" alt="image01" /></div>
+				</div>
+				<div class="da-slide">
+					<h2>المحتوى العلمي</h2>
+					<p> المحتوى العلمي للموقع موجه الى طلبة الصف السادس من التعليم الأساسي، لكي تتمكن من رؤية المحتوى يجب عليك الأشتراك والتسجيل في الموقع  </p>
+					<a href="#" class="da-link">معرفة المزيد</a>
+					<div class="da-img"><img src="images/4.png" alt="image01" /></div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
+			</div>
+        </div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cslider.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			
+				$('#da-slider').cslider({
+					autoplay	: true,
+					bgincrement	: 1000
+				});
+			
+			});
+		</script>	
+    </body>
+</html>

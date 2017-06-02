@@ -1,0 +1,101 @@
+{% extends 'toolbar.html'%}
+{% load static%}
+{% block head%}
+
+
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 300PX;
+    position: fixed;
+    z-index: 1;
+    top: 65px;
+    right: 0;
+    background-color: #730099;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+}
+
+.sidenav a {
+    padding: 8px 8 px 8 px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.photo{
+display: none;
+}
+</style>
+
+{% endblock %}
+{% block options %} onload="show_hide_init()" {% endblock %}
+{% block body_rest%}
+
+
+<div id="mySidenav" class="sidenav"  dir="rtl">
+  <a href="#"  onclick=" return show_hide(1)">حكاية جده- الجذء الأول</a>
+  <a href="#" onclick=" return show_hide(2)">حكاية جده -الجذء الثاني</a></li>
+  <a href="#"  onclick=" return show_hide(3)">معجم الكلمات</a></li>
+  <a href="questions/4" > أسئله الدرس</a> 
+  
+  
+  
+</div >]
+<div align="center"><h1> حكاية جدة</h1></div>
+<div dir="rtl" style="margin-right:300px">
+<img src="{% static 'lessons\images\lesson4\l1.png' %}" alt="Smiley face" id="1" style="display: block; " class="mySlides">
+<img src="{% static 'lessons\images\lesson4\l2.png' %}" alt="Smiley face" id="2" style="display: none; " class="mySlides">
+<img src="{% static 'lessons\images\lesson4\l3.png' %}" alt="Smiley face" id="3" style="display: none; " class="mySlides">
+
+</div>
+<script>
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function show_hide(elem_id) {
+	var i;
+    var x = document.getElementsByClassName("mySlides");
+	for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	var y = document.getElementById(elem_id); 
+        y.style.display = 'block';
+}
+
+function show_hide_init() {
+	var i;
+    var x = document.getElementsByClassName("mySlides");
+	for (i = 1; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+}
+
+</script> 
+{% endblock %}

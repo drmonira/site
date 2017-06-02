@@ -1,0 +1,103 @@
+</html dir="rtl" lang="ar">
+{% load static %}
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ar" class="no-js" dir="rtl"> <!--<![endif]-->
+<head>
+
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Login and Registration Form </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="{% static 'LoginRegistrationForm/css/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'LoginRegistrationForm/css/style.css' %}"  />
+		<link rel="stylesheet" type="text/css" href="{% static 'LoginRegistrationForm/css/animate-custom.css' %}" />
+</head>>
+<body>
+        <div class="container">
+            <header>
+                <h1>تسجيل الدخول <span> </span></h1>
+				<nav class="codrops-demos">
+					<span>يمكنك  <strong>"دخول الموقع أو التسجيل من هنا "</strong> لكي تتمكن من مشاهدة المحتوى</span>
+					<a href="#toregister" class="current-demo">التسجيل بالموقع</a>
+					<a href="#tologin">تسجيل الدخول</a>
+		
+				</nav>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="{% url 'authinticate_login' %}" autocomplete="on" method="post" > 
+                            {% csrf_token %}
+                                <h1>تسجيل الدخول</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" dir="rtl" > اسم المستخدم </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="إسم المستخدم"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> كلمة المرور</label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="كلمة المرور" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<label for="loginkeeping">إدامة التسجيل</label>
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" value="تسجيل الدخول" /> 
+								</p>
+                                <p class="change_link">
+									لم تقم بالتسجيل بعد؟
+									<a href="#toregister" class="to_register">سجل الان</a>
+								</p>
+								<input type="hidden" value={{next}} name="next"/>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="{% url 'register_login' %}"   method="post">
+                             {% csrf_token %}
+                            
+                                 <h1> سجل بالموقع </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">اسم المستخدم</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="اسم المستخدم" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon-email="e" > البريد الالكتروني</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">كلمة المرور </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon-pass-conf="p">تأكيد كلمة المرور </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="التسجيل"/> 
+								</p>
+                                <p class="change_link">  
+									مسجل بالفعل؟
+									<a href="#tologin" class="to_register"> قم بتسجيل الدخول  </a>
+								</p>
+								<input type="hidden" value={{next}} name="next"/>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

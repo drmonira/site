@@ -1,0 +1,48 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+    {% block head%}
+    {% endblock %}
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+         <title>د/رغد</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Parallax Content Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slider, animations, parallax, delayed, easing, jquery, css3, kendo UI" />
+        <meta name="author" content="Codrops" />
+   
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/demo2.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'index/css/style2.css' %}" />
+		<script type="text/javascript" src="{% static 'index/js/modernizr.custom.28468.js' %}"></script>
+		<link href='http://fonts.googleapis.com/css?family=Economica:700,400italic' rel='stylesheet' type='text/css'>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{% static 'index/css/nojs.css' %}" />
+		</noscript>
+    </head>
+    <body>
+        
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+            	{% if token %}
+	             <a href="{% url 'logout' %}">
+	                 <strong>مرحبا {{username}}</strong> إضغط هنا لتسجيل الخروج&laquo;
+	             </a>
+                {% else %}
+                <a href="{% url 'log_reg' %}">
+                    <strong>رجاء </strong> تسجيل الدخول &laquo;
+                 </a>
+                {% endif %}
+                
+                <span class="right">
+					<a href=""> تقويمك </a>
+					<a href="{% url 'content' %}"> <strong>  الدروس </strong> </a>
+                    <a href="{% url 'main' %}"> الرئيسيه </a>
+                </span>
+                <div class="clr"></div>
+            </div><!--/ Codrops top bar -->
+            
+            {% block body_rest%}
+            
+            {% endblock%}
+  </body>
