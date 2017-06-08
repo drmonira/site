@@ -713,25 +713,25 @@ var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-11363934-3']);_gaq.push(['_t
 						border="0" align="center">
 						<tbody>
 							<tr>
-								<td align="center">
-									<a class="mainmenu" href="{% url 'main' %}"> 
-									<img id="i_icon_mini_index" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2" alt="الرئيسية" title="الرئيسية">الرئيسية </a>&nbsp; 
-									<a class="mainmenu" href="#">
-									<img id="i_icon_mini_faq" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2" alt="الأسئلة" title="الأسئلة">الأسئلة</a> &nbsp; 
-									<a class="mainmenu" href="#"> 
-									<img id="i_icon_mini_members" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2" alt="السيره الذاتيه" title="السيره الذاتيه">السيره الذاتيه
-									</a> &nbsp; 
-									<a class="mainmenu" href="http://www.darsksosi.com/search" onclick="showhide(document.getElementById(&#39;search_menu&#39;)); return false;">
-									<img id="i_icon_mini_search" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2" alt="بحـث" title="بحـث">بحـث</a> &nbsp;
-									{% if token %}
-									
-									<a class="mainmenu" href="{% url 'logout' %}"> 
-									<img id="i_icon_mini_index" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2"></img>  تسجيل الخروج  </a>&nbsp; 
-									{% else %}
-									
-									<a class="mainmenu" href="{% url 'main_page_logtrick' %}"> 
-									<img id="i_icon_mini_index" src=" {% static 'index_files/empty.gif' %}" border="0" height="13" hspace="2" > </img> تسجيل الدخول </a>&nbsp; 
-									{% endif %}
+								<td align="center"><a class="mainmenu"
+									href="http://www.darsksosi.com/"> <img
+										id="i_icon_mini_index" src=" {% static 'index_files/empty.gif' %}"
+										border="0" height="13" hspace="2" alt="الرئيسية"
+										title="الرئيسية">الرئيسية
+								</a>&nbsp; <a class="mainmenu" href="http://www.darsksosi.com/faq"><img
+										id="i_icon_mini_faq" src=" {% static 'index_files/empty.gif' %}" border="0"
+										height="13" hspace="2" alt="الأسئلة" title="الأسئلة">الأسئلة
+								</a> &nbsp; <a class="mainmenu"
+									href="http://www.darsksosi.com/memberlist"> <img
+										id="i_icon_mini_members" src=" {% static 'index_files/empty.gif' %}"
+										border="0" height="13" hspace="2" alt="السيره الذاتيه"
+										title="السيره الذاتيه">السيره الذاتيه
+								</a> &nbsp; <a class="mainmenu"
+									href="http://www.darsksosi.com/search"
+									onclick="showhide(document.getElementById(&#39;search_menu&#39;)); return false;">
+										<img id="i_icon_mini_search" src=" {% static 'index_files/empty.gif' %}"
+										border="0" height="13" hspace="2" alt="بحـث" title="بحـث">بحـث
+								</a> &nbsp;
 									<div id="search_menu"
 										style="display: none; position: absolute; z-index: 10000">
 										<form action="http://www.darsksosi.com/search" method="get">
@@ -760,7 +760,7 @@ var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-11363934-3']);_gaq.push(['_t
 													</tr>
 													<tr>
 														<td class="row2" align="center"><span class="genmed">
-																<a href="#" rel="nofollow"
+																<a href="http://www.darsksosi.com/search" rel="nofollow"
 																title="بحث متقدم"> <img
 																	src=" {% static 'index_files/empty.gif' %}" width="12" height="13"
 																	border="0" hspace="3" alt="بحث متقدم"> بحث متقدم
@@ -792,9 +792,7 @@ var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-11363934-3']);_gaq.push(['_t
 					</div>
 					</div>
 					</div>
-					</div>
-					
-					</td>
+					</div></td>
 			</tr>
 		</tbody>
 	</table>
@@ -831,12 +829,12 @@ var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-11363934-3']);_gaq.push(['_t
 																			onmouseout="this.scrollAmount=5"
 																			onmousedown="this.scrollAmount=5" scrollamount="5"
 																			scrolldelay="5" id="wootz0"> <a><strong>أهلا
-																				****  {{username}} **** ومرحبا بكم في موقع </strong></a> <a></a> <a
+																				ومرحبا بكم في موقع </strong></a> <a></a> <a
 																			onmouseover="document.getElementById(&#39;comments_scroll_container&#39;).stop();"
 																			onmouseout="document.getElementById(&#39;comments_scroll_container&#39;).start();"
 																			href="http://www.darsksosi.com/t8068-topic#42971"
-																			title="marque test"><strong>د/ منيرة عبيد
-																				سعد سودان الرشيدي للحصول على درجة الماجستير تكنولوجيا
+																			title="marque test"><strong>منيرة عبيد
+																				سعد سودان الرشيديللحصول على درجة الماجستير تكنولوجيا
 																				التعليم في التربية النوعية(تخصص تكنولوجيا التعليم)</strong> </a>
 																		<img src=" {% static 'index_files/i_icon_minitime.gif' %}" alt="">
 																		</marquee></td>
@@ -979,9 +977,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس الأول : من نعم الله</h1>
 															{% if token %}
-															<a id="norrd" class="forumlink"href="content/1/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1022,9 +1020,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 																<h1>الدرس الثاني : من القيم الإسلاميه حق الطريق </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/2/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1065,18 +1063,18 @@ html body iframe[name="google_ads_frame"] {
 															</h3>
 															<span class="genmed"></span> <h1>الدرس الثالث : راية النصر  </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/3/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
 														</span></td>
 														<td class="row3 over" align="center" valign="middle"
 															height="50"><span class="gensmall"><span>
-																	<a href="#">نص
+																	<a href="http://www.darsksosi.com/t8039-topic">نص
 																		شعري</a> <a
-																	href="#"
+																	href="http://www.darsksosi.com/t8039-topic#42926"
 																	class="last-post-icon"><img
 																		class="sprite-icon_reply"
 																		src=" {% static 'index_files/empty.gif' %}"></a>
@@ -1112,9 +1110,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس الرابع : حكاية جده  </h1>
 															{% if token %}
-															<a id="norrd" class="forumlink"href="content/4/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1139,7 +1137,7 @@ html body iframe[name="google_ads_frame"] {
 														</td>
 													</tr>
 
-										<!-- 5    -->
+																										<!-- 5    -->
 
 													<tr>
 														<td class="row1" align="center" valign="middle"><img
@@ -1155,9 +1153,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس الخامس :السنجاب  </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/5/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1200,9 +1198,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس  السادس : نظره مستقبليه </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/6/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1247,9 +1245,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس السابع : أغنية الربيع  </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/7/"> المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1291,9 +1289,9 @@ html body iframe[name="google_ads_frame"] {
 															<span class="genmed"></span> 
 															<h1>الدرس الثامن : ألة التصوير </h1>
 														{% if token %}
-															<a id="norrd" class="forumlink"href="content/8/">المزيد </a> 
+															<a id="norrd" class="forumlink"href="1/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1338,7 +1336,7 @@ html body iframe[name="google_ads_frame"] {
 														{% if token %}
 															<a id="norrd" class="forumlink"href="content/9/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1385,7 +1383,7 @@ html body iframe[name="google_ads_frame"] {
 														{% if token %}
 															<a id="norrd" class="forumlink"href="content/10/"> المزيد </a> 
 															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
+															<p>رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</p>
 															{% endif %}
 															<span class="genmed"></span> <span class="gensmall">
 
@@ -1422,11 +1420,11 @@ html body iframe[name="google_ads_frame"] {
 		<tbody>
 			<tr>
 				<td align="right" valign="bottom" width="40%"><font size="2"
-					color="#001b4e">جميع الحقوق محفوظه ©<a
-						class="vglnk" href="#" rel="nofollow"><span>darsksosi</span><span>.</span><span>com</span></a></font></td>
+					color="#001b4e">جميع الحقوق محفوظه لمنتدي درس خصوصى ©<a
+						class="vglnk" href="http://darsksosi.com/" rel="nofollow"><span>darsksosi</span><span>.</span><span>com</span></a></font></td>
 				<td align="center"><a href="http://www.ahlastyl.com/"
 					rel="dofollow"><font size="2"><map name="FPMap0">
-								<area href="#" shape="rect"
+								<area href="http://www.ahlastyl.com/" shape="rect"
 									coords="49, 81, 185, 97">
 							</map><img border="0" src=" {% static 'index_files/ouuuoo11.jpg' %}" width="277"
 							height="98"

@@ -505,6 +505,80 @@ transform
 	z-index: 4
 }
 </style>
+<style>
+
+.sidenav {
+    height: 100%;
+    width:50PX;
+    position: relative;
+    z-index: 1;
+    top: 250px;
+    right: 0;
+    background-color: #3f7dd4;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 150px;
+}
+
+.sidenav a {
+    padding: 8px 8 px 8 px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.photo{
+display: none;
+}
+</style>
+
+
+
+<script>
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+function show_hide(elem_id) {
+	var i;
+    var x = document.getElementsByClassName("mySlides");
+	for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+	var y = document.getElementById(elem_id); 
+        y.style.display = 'block';
+}
+function show_hide_init() {
+	var i;
+    var x = document.getElementsByClassName("mySlides");
+	for (i = 1; i < x.length; i++) {
+		 x[i].style.display = "none";  
+	  }
+}
+
+</script>
+
+
+
 </head>
 <body background=" {% static 'index_files/oouu_o10.jpg' " bgcolor="#ffffff"
 	text="#002d96" link="#00246b" vlink="#00246b">
@@ -931,520 +1005,103 @@ html body iframe[name="google_ads_frame"] {
 										<td width="119" height="63"><img border="0"
 											src=" {% static 'index_files/ousooo10.png' %}" width="119" height="63"></td>
 										<td align="center" background=" {% static 'index_files/ousooo11.png' %}"><img
-											border="0" src=" {% static 'index_files/44444410.png' %}" width="362"
+											border="0" src="{% static 'lessons\images\lesson10\tl10.png' %}" width="362"
 											height="63"></td>
 										<td width="122" height="63"><img border="0"
 											src=" {% static 'index_files/ousooo12.png' %}" width="122" height="63"></td>
 									</tr>
 								</tbody>
 							</table>
-							<table width="100%" align="center" border="0" cellpadding="0"
-								cellspacing="0">
-								<tbody>
-									<tr>
-										<td width="42" background=" {% static 'index_files/ousooo13.png' %}"></td>
-										<td valign="middle"><div style="text-align: center;"
-												id="mainmenu"></div>
-											<table class="forumline" width="100%" border="0"
-												cellspacing="1" cellpadding="0"></table>
-											<table class="forumline" width="100%" border="0"
-												cellspacing="1" cellpadding="0">
-												<tbody>
-													<tr>
-														<th colspan="2" nowrap="nowrap" width="50%"
-															class="secondarytitle">
-															<h1>الدروس</h1>
-														</th>
-														<th nowrap="nowrap" width="150">
-															<div style="width: 150px;">التصنيف</div>
-														</th>
-														<th nowrap="nowrap" width="150">
-															<div style="width: 150px;">أسئلة الدرس</div>
-														</th>
-													</tr>
-
-<!-- 1 -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="./index_files\lessons\images\lesson1\l1.png"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس الأول : من نعم الله</h1>
-															{% if token %}
-															<a id="norrd" class="forumlink"href="content/1/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">نص
-																		قرآني</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'lessons\images\lesson1\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-																<h1>الدرس الثاني : من القيم الإسلاميه حق الطريق </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/2/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">حديث
-																		شريف</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-
-
-
-													<!-- 3    -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'lessons\images\lesson3\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> <h1>الدرس الثالث : راية النصر  </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/3/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="#">نص
-																		شعري</a> <a
-																	href="#"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
+							
+							
+							
+							
+							
 
 
 
 
-													<!-- 4    -->
 
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'lessons\images\lesson4\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس الرابع : حكاية جده  </h1>
-															{% if token %}
-															<a id="norrd" class="forumlink"href="content/4/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
 
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">قراءه</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<table width="100%" align="center" border="0" cellpadding="0"
+	cellspacing="0">
+	<tbody>
+		<tr>
+			<td width="42" background="{% static 'index_files/ousooo13.png' %}"></td>
+			<td valign="right">
+				<div style="text-align: right;"id="mainmenu" align="right">
+					<ul class="glossymenu">
+						<li class="current"><a href="#" onclick=" return show_hide(1)"><b>النص</b></a></li>
+						<li><a href="#" onclick=" return show_hide(2)"><b>معجم الكلمات</b></a></li>
+						<li><a href="#" onclick=" return show_hide(3)"><b> الأسئله</b></a></li>
+					</ul>
+				</div>
+				<table class="forumline" width="100%" border="0" cellspacing="1"
+					cellpadding="0"></table>
+				<table class="forumline" width="100%" border="0" cellspacing="1"
+					cellpadding="0">
+					<tbody>
+					
+					<!-- tile of the table  -->
+						<tr>
+							<th colspan="2" nowrap="nowrap" width="100%"
+								class="secondarytitle">
+								<h2>الأسئله</h2>
+							</th>
+							<th nowrap="nowrap" width="150"><div style="width: 150px;">
+							<th nowrap="nowrap" width="100"></th>
+						</tr>
+						<!-- lesson content -->
+						<tr>
+							
+							<img src="{% static 'lessons\images\lesson10\l1.png' %}" alt="Smiley face" id="1" style="display: block; " class="mySlides"></img>
+							<img src="{% static 'lessons\images\lesson10\l2.png' %}" alt="Smiley face" id="2" style="display: none; " class="mySlides"></img>
+							
+							<div id="3" class="mySlides" style="display: none; " align="center" name="q">
+							<img src="{% static 'lessons\images\lesson10\q1.png' %}" alt="Smiley face" hight="900" width="700">
+							<img src="{% static 'lessons\images\lesson10\q2.png' %}" alt="Smiley face" hight="900" width="700">
+							</div>
+						</tr>
+					</tbody>
+				</table></td>
+			<td width="43" background="{% static '/index_files/ousooo14.png' %}"></td>
+		</tr>
+	</tbody>
+</table>
 
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
 
-														</td>
-													</tr>
-
-										<!-- 5    -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'lessons\images\lesson5\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس الخامس :السنجاب  </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/5/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">قراءه</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-													
-													
-													
-													<!-- 6   -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'index_files\lessons\images\lesson6\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس  السادس : نظره مستقبليه </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/6/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">قراءه</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-													
-													
-													
-													
-													
-															<!-- 7   -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'index_files\lessons\images\lesson6\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس السابع : أغنية الربيع  </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/7/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">(نص شعري)</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-													
-														
-															<!-- 8   -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'index_files\lessons\images\lesson6\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس الثامن : ألة التصوير </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/8/">المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">قراءه</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-													
-													
-													
-															<!-- 9   -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'index_files\lessons\images\lesson6\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس التاسع : ربوع السلام </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/9/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">نص شعري</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-													
-													
-													
-													
-													
-															<!-- 10   -->
-
-													<tr>
-														<td class="row1" align="center" valign="middle"><img
-															src="{% static 'index_files\lessons\images\lesson6\l1.png' %}"
-															alt="lesson1 title" height="80" width="120"></td>
-														<td class="row1 over" colspan="1" valign="top"
-															align="center" width="100%" height="50"><h3
-																class="hierarchy">
-																<span class="forumlink"> </span>
-															</h3>
-															<span class="genmed"></span> </span>
-														</h3>
-															<span class="genmed"></span> 
-															<h1>الدرس العاشر : النبي محمد (ص) وخلق التواضع </h1>
-														{% if token %}
-															<a id="norrd" class="forumlink"href="content/10/"> المزيد </a> 
-															{% else %}
-															<a   href="{% url 'main_page_logtrick' %}">رجاء قم بتسجيل الدخول لكي تتمكن من مشاهدة المحتوى</a>
-															{% endif %}
-															<span class="genmed"></span> <span class="gensmall">
-
-														</span></td>
-														<td class="row3 over" align="center" valign="middle"
-															height="50"><span class="gensmall"><span>
-																	<a href="http://www.darsksosi.com/t8039-topic">قراءه</a> <a
-																	href="http://www.darsksosi.com/t8039-topic#42926"
-																	class="last-post-icon"><img
-																		class="sprite-icon_reply"
-																		src=" {% static 'index_files/empty.gif' %}"></a>
-															</span></span></td>
-
-														<td class="row3" align="center" valign="middle"
-															height="50">
-															<div style="width: 136px; height: 18px; margin-top: 3px"
-																class="moadee3">
-																<font face="Tahoma"><span style="font-size: 8pt">الأطلاع
-																		على أسئلة الدرس</span> </font>
-															</div>
-
-														</td>
-													</tr>
-										
-												</tbody>
-											</table></td>
-										<td width="43" background=" {% static 'index_files/ousooo14.png' %}"></td>
-									</tr>
-								</tbody>
-							</table>
-
-	<table border="0" width="100%" cellspacing="0" cellpadding="0"
-		background=" {% static 'index_files/ouuuoo10.jpg' %}">
-		<tbody>
-			<tr>
-				<td align="right" valign="bottom" width="40%"><font size="2"
-					color="#001b4e">جميع الحقوق محفوظه ©<a
-						class="vglnk" href="#" rel="nofollow"><span>darsksosi</span><span>.</span><span>com</span></a></font></td>
-				<td align="center"><a href="http://www.ahlastyl.com/"
-					rel="dofollow"><font size="2"><map name="FPMap0">
-								<area href="#" shape="rect"
-									coords="49, 81, 185, 97">
-							</map><img border="0" src=" {% static 'index_files/ouuuoo11.jpg' %}" width="277"
-							height="98"
-						
-							usemap="#FPMap0"></font></a></td>
-				<td align="left" valign="bottom" width="40%"><a
-					href="http://www.darsksosi.com/"><font size="2" color="#001b4e">الرئيسيه</font></a><font
-					size="2"><font color="#001b4e"> |<span lang="ar-eg">
-						</span></font><a href="http://www.darsksosi.com/register"><font
-							color="#001b4e">التسجيل</font></a><font color="#001b4e"> |<span
-							lang="ar-eg"></span></font><a href="http://www.darsksosi.com/contact"><font
-							color="#001b4e">مراسلة الادارة</font></a><font color="#001b4e">
-							|</font><a href="http://www.darsksosi.com/"><font color="#001b4e">احصائيات</font></a><font
-						color="#001b4e"> | </font> <a href="http://www.darsksosi.com/#top"><span
-							lang="ar-eg"><font color="#001b4e">الاعلى</font></span></a></font></td>
-			</tr>
-		</tbody>
-	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 </body>
